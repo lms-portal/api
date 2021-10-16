@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\ExamRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ExamRepository::class)
+ * @UniqueEntity("name")
  */
 class Exam
 {
@@ -15,12 +18,13 @@ class Exam
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank()
      */
-    private $name;
+    private string $name;
 
     public function getId(): ?int
     {

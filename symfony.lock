@@ -88,6 +88,9 @@
     "laminas/laminas-code": {
         "version": "4.4.3"
     },
+    "monolog/monolog": {
+        "version": "2.3.5"
+    },
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
@@ -307,6 +310,24 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/monolog-bridge": {
+        "version": "v5.3.7"
+    },
+    "symfony/monolog-bundle": {
+        "version": "3.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.7",
+            "ref": "a7bace7dbc5a7ed5608dbe2165e0774c87175fe6"
+        },
+        "files": [
+            "./config/packages/test/monolog.yaml",
+            "./config/packages/prod/monolog.yaml",
+            "./config/packages/prod/deprecations.yaml",
+            "./config/packages/dev/monolog.yaml"
+        ]
+    },
     "symfony/password-hasher": {
         "version": "v5.3.8"
     },
@@ -392,6 +413,9 @@
     "symfony/security-http": {
         "version": "v5.3.8"
     },
+    "symfony/serializer": {
+        "version": "v5.3.8"
+    },
     "symfony/service-contracts": {
         "version": "v2.4.0"
     },
@@ -400,6 +424,22 @@
     },
     "symfony/string": {
         "version": "v5.3.7"
+    },
+    "symfony/translation-contracts": {
+        "version": "v2.4.0"
+    },
+    "symfony/validator": {
+        "version": "5.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "3eb8df139ec05414489d55b97603c5f6ca0c44cb"
+        },
+        "files": [
+            "./config/packages/validator.yaml",
+            "./config/packages/test/validator.yaml"
+        ]
     },
     "symfony/var-dumper": {
         "version": "v5.3.8"
